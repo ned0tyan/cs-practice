@@ -12,7 +12,7 @@ def winner(names: list[str], scores: list[float]) -> str:
 def average(scores: list[float]) -> float:
     if (scores == []):
         return 0
-    return sum(scores) / len(scores)
+    return round(sum(scores) / len(scores), 2)
 
 #Имена по убыванию результата. При равенстве — в исходном порядке.
 def ranking(names: list[str], scores: list[float]) -> list[str]:
