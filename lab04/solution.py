@@ -56,3 +56,4 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
 
 # if __name__ == '__main__':
 #     main()
+# just smth to change file
