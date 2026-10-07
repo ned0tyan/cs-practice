@@ -1,6 +1,3 @@
-names = ['Аня', 'Боря', 'Вика']
-scores = [7.0, 9.0, 9.0]
-
 #Имя участника с наибольшим результатом. При равенстве — тот, кто раньше в списке.
 def winner(names: list[str], scores: list[float]) -> str:
     betterResultName = 0
@@ -42,3 +39,20 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
     return aboveAverageNamesList
 
 
+def main():
+    names = ['Аня', 'Боря', 'Вика']
+    scores = [7.0, 9.0, 9.0]
+
+    nameOfWinner: str = winner(names, scores)
+    averageScore = average(scores)
+    rankedNames = ranking(names, scores)
+    namesWithScoreAboveAverage = above_average(names, scores)
+
+    print(f"Winners name: {nameOfWinner}")
+    print(f'Average score is {averageScore}')
+    print(f'Names ranked by score: {rankedNames}')
+    print(f'Names with score above average: {namesWithScoreAboveAverage}')
+
+
+if __name__ == '__main__':
+    main()
