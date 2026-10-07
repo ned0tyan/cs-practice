@@ -3,7 +3,7 @@ def main():
     n = int(input('Введите количество записей: '))
     errorCounter = 0
     aboveThresholdCounter = 0
-    maxScore = -1
+    maxScore = None
     scoresSum = 0
 
     for i in range(n):
@@ -13,6 +13,9 @@ def main():
             continue
 
         score = float(score)
+        if (maxScore == None):
+            maxScore = score
+        
         scoresSum += score
         if (score > threshold):
             aboveThresholdCounter += 1
